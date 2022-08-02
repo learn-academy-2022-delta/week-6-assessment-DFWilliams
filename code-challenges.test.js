@@ -65,6 +65,17 @@ describe("betterThanGrammarly", () => {
 
 // I was delirious. It didnt work 
 
+//---Puesdocode---//
+  //declare a function called betterThanGrammarly 
+  //set param of array
+  //declare a variable called name 
+    // use .split to convert the name key into an array
+  //declare a variable firstName 
+    // use chartAt and toUppercase to captialize the first letter of the first word in the name key array
+  //declare a variable lastName 
+    // use chartAt and toUppercase to captialize the first letter of the second word in the name key array
+  //use string interpolation to return the sentence.
+
 const betterThanGrammarly = (array) => {
   return array.map(value => {
     let name = value.name.split(" ")

@@ -10,22 +10,29 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 Your answer: This problem would be fixed by conducting a migration. In the migration you would add a column called cohort_id, which is the name of the foreign key, to the Student table. 
 
-Researched answer:
+Researched answer: This problem can be fixed by conducting an active record migration. The migration call that could be used for this issue is add_foreign_key. Within terminal you would run a rails command - $ rails generate migration add_foreign_key_to_student. From there, a migration file will be generated within the app. In the migration file you would type add_foreign_key :students (the name of the model where the foreign key will be ), :cohort_id (which will be the name of the foreign key), :integer (which is the data type of the contents that will occupy this column)
 
 2. Which RESTful routes must always be passed params? Why?
 
 Your answer: The RESTful routes that require params are create, edit, show, and destroy. The create RESTful route needs params for validation measures. We give the entry required information, so if the user enters information in the form and it follows the required info held in the param the entry will be entered into the database. Params are needed in the edit, destroy and show RESTful routes in order to access a specific instance within the database. For instance, with edit you set params[:id] if you wanted to access the instance by the primary. 
 
-Researched answer:
+Researched answer: The restful routes that are passed params are show, create, edit, update, and destroy. They need params in order to access instances within the database. 
 
 3. Name three rails generator commands. What is created by each?
 
 Your answer: 
     $ rails generate model - this rails command creates a model/table would follow it with column names and the data type that will occupy the column. 
+
     $ rails db:create - creates the database 
+
     $ rails generate resource - this rails command creates the Restful routes for your API
 
-Researched answer: $ rails console - this command allows you to interact with the 
+Researched answer: 
+    $ rails new - this creates a Rails application, it gives you all of the code needed to run thr application 
+
+    $ rails generate - can be used to create different genterators, all by using templates. when ran you will be given a list of generators to choose from. you can create models using this command 
+
+    $ rails destroy - will do the opposite rails generate. Whatever was created from the rails generate command will be undone/removed by the rails destroy command
 
 4. Consider the Rails routes below. What is the name of the controller method that would be called by each route? What action would each of the controller methods perform?
 
